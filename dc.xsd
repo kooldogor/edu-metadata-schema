@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://purl.org/dc/elements/1.1/"
+           elementFormDefault="qualified">
+    
+    <xs:element name="title" type="xs:string">
+        <xs:annotation><xs:documentation>자원의 명칭으로 검색의 일차적 기준이 되는 공식 제목 정보</xs:documentation></xs:annotation>
+    </xs:element>
+    
+    <xs:element name="identifier" type="xs:anyURI">
+        <xs:annotation><xs:documentation>시스템 간 데이터 교환 시 자원을 특정하기 위한 고유한 참조 문자열 또는 URI</xs:documentation></xs:annotation>
+    </xs:element>
+    
+    <xs:element name="creator" type="xs:string">
+        <xs:annotation><xs:documentation>콘텐츠 생성 및 제작에 책임이 있는 일차적 개인, 그룹 또는 기관 엔티티</xs:documentation></xs:annotation>
+    </xs:element>
+    
+    <xs:element name="format" type="xs:string">
+        <xs:annotation><xs:documentation>물리적/디지털 매체 형식 또는 MIME 파일 타입 형식 권장</xs:documentation></xs:annotation>
+    </xs:element>
+    
+</xs:schema>

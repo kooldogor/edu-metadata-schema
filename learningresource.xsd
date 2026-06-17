@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://metadata.edu/schema/"
+           xmlns="http://metadata.edu/schema/"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:dct="http://purl.org/dc/terms/"
+           xmlns:lrmi="http://purl.org/dcx/lrmi-terms/"
+           xmlns:kem="http://www.keris.or.kr/kem/"
+           xmlns:cc="http://creativecommons.org/ns#"
+           xmlns:edu="http://metadata.edu/schema/"
+           elementFormDefault="qualified">
+    
+    <xs:import namespace="http://purl.org/dc/elements/1.1/" schemaLocation="dc.xsd"/>
+    <xs:import namespace="http://purl.org/dc/terms/" schemaLocation="dct.xsd"/>
+    <xs:import namespace="http://purl.org/dcx/lrmi-terms/" schemaLocation="lrmi.xsd"/>
+    <xs:import namespace="http://www.keris.or.kr/kem/" schemaLocation="kem.xsd"/>
+    <xs:import namespace="http://creativecommons.org/ns#" schemaLocation="cc.xsd"/>
+    
+    <xs:element name="LearningResource">
+        <xs:annotation>
+            <xs:documentation>콘텐츠 생성 및 교육적 활용 목적을 기술하기 위한 최상위 루트 컨테이너 자원 엘리먼트입니다.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="dc:title"/>
+                <xs:element ref="dc:identifier"/>
+                <xs:element ref="dc:creator" maxOccurs="unbounded"/>
+                <xs:element ref="dc:format"/>
+                
+                <xs:element ref="lrmi:learningResourceType" maxOccurs="unbounded"/>
+                <xs:element ref="lrmi:educationalUse" maxOccurs="unbounded"/>
+                
+                <xs:element ref="dct:instructionalMethod" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="edu:tailoredLevel" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="lrmi:typicalAgeRange" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="lrmi:interactivityType"/>
+                <xs:element ref="lrmi:timeRequired" minOccurs="0"/>
+                <xs:element ref="lrmi:alignmentObject" minOccurs="0" maxOccurs="unbounded"/>
+                
+                <xs:element ref="kem:classification" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="cc:license"/>
+                <xs:element ref="cc:attributionName" minOccurs="0" maxOccurs="unbounded"/>
+                
+                <xs:element ref="edu:difficulty" minOccurs="0"/>
+                <xs:element ref="edu:safetyCaution" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="edu:lessonSequence" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="difficulty" type="xs:string">
+        <xs:annotation>
+            <xs:documentation>자원의 인지적 복잡성 및 요구되는 인지 부하의 정도 (Custom)</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:element name="safetyCaution" type="xs:string">
+        <xs:annotation>
+            <xs:documentation>안전 주의사항: 전기, 화학 실험 등 교구나 실험 기구 사용 시 필수적인 도메인 특화 안전 지침 (Custom)</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:element name="lessonSequence" type="xs:string">
+        <xs:annotation>
+            <xs:documentation>전체 수업 설계 안에서 해당 자료가 투입되고 사용되는 특정 차시 및 순서 (Custom)</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:element name="tailoredLevel">
+        <xs:annotation>
+            <xs:documentation>성취기준 대비 해당 자료가 타겟팅하는 학습자의 성취 수준 (Custom)</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="remediation">
+                    <xs:annotation><xs:documentation>성취기준 미달 학생(학업 성취율 40% 미만)을 위한 보충 및 기초 학력 지원 자료</xs:documentation></xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="basic">
+                    <xs:annotation><xs:documentation>성취기준의 핵심 내용을 표준적으로 다루는 기본 학습 자료</xs:documentation></xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="enrichment">
+                    <xs:annotation><xs:documentation>성취기준 도달 후 개념을 깊이 탐구하거나 실생활에 적용하는 심화 자료</xs:documentation></xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="acceleration">
+                    <xs:annotation><xs:documentation>해당 성취기준을 넘어 다음 단계의 학습 내용이나 고차원적 과제를 다루는 속진 자료</xs:documentation></xs:annotation>
+                </xs:enumeration>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    
+</xs:schema>

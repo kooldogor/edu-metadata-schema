@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LearningResource xmlns="http://metadata.edu/schema/"
+                  xmlns:dc="http://purl.org/dc/elements/1.1/"
+                  xmlns:lrmi="http://purl.org/dcx/lrmi-terms/"
+                  xmlns:cc="http://creativecommons.org/ns#"
+                  xmlns:edu="http://metadata.edu/schema/"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://metadata.edu/schema/ LearningResource.xsd">
+
+  <dc:title>열에너지 보존 법칙 기초 다지기 활동지</dc:title>
+  <dc:identifier>http://res.keris.or.kr/physics/remediation/2024-WS-05</dc:identifier>
+  <dc:creator>선유고등학교 물리교과협의회</dc:creator>
+  <dc:format>file/docx</dc:format>
+  <lrmi:learningResourceType>worksheet</lrmi:learningResourceType>
+  <lrmi:educationalUse>remediation</lrmi:educationalUse>
+  <edu:tailoredLevel>remediation</edu:tailoredLevel>
+  <lrmi:typicalAgeRange>16-18</lrmi:typicalAgeRange>
+  <lrmi:interactivityType>active</lrmi:interactivityType>
+  <lrmi:alignmentObject>
+    <lrmi:alignmentType>requires</lrmi:alignmentType>
+    <lrmi:targetName>[12물리01-05] 에너지 전환 과정에서의 에너지 총량 보존</lrmi:targetName>
+  </lrmi:alignmentObject>
+  <cc:license>https://creativecommons.org/publicdomain/zero/1.0/</cc:license>
+  <cc:attributionName>Public Domain</cc:attributionName>
+  <edu:difficulty>Level 1 (최소 성취수준)</edu:difficulty>
+  <edu:lessonSequence>3/3 차시 (방과후 보충)</edu:lessonSequence>
+</LearningResource>

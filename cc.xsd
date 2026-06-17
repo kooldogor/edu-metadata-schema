@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://creativecommons.org/ns#"
+           elementFormDefault="qualified">
+    
+    <xs:element name="license" type="xs:anyURI">
+        <xs:annotation><xs:documentation>자원에 법적으로 적용된 Creative Commons 라이선스의 공식 이용허락 조건 URL</xs:documentation></xs:annotation>
+    </xs:element>
+    
+    <xs:element name="attributionName" type="xs:string">
+        <xs:annotation><xs:documentation>라이선스 조건에 따라 자원 활용 시 반드시 명시해야 하는 저작권자 성명 또는 기관명</xs:documentation></xs:annotation>
+    </xs:element>
+    
+</xs:schema>

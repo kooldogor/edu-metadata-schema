@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LearningResource xmlns="http://metadata.edu/schema/"
+                  xmlns:dc="http://purl.org/dc/elements/1.1/"
+                  xmlns:dct="http://purl.org/dc/terms/"
+                  xmlns:lrmi="http://purl.org/dcx/lrmi-terms/"
+                  xmlns:kem="http://www.keris.or.kr/kem/"
+                  xmlns:cc="http://creativecommons.org/ns#"
+                  xmlns:edu="http://metadata.edu/schema/"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://metadata.edu/schema/ LearningResource.xsd">
+    
+    <dc:title>체육과 중단원 [체조]: 뜀틀 다리 벌려 넘기 단계별 유연성 및 두려움 극복 지도안</dc:title>
+    <dc:identifier>http://res.keris.or.kr/physical-edu/gymnastics/2026-LP-04</dc:identifier>
+    <dc:creator>김체육 (OO고등학교 체육과협의회)</dc:creator>
+    <dc:format>application/pdf</dc:format>
+    
+    <lrmi:learningResourceType>lessonPlan</lrmi:learningResourceType>
+    <lrmi:educationalUse>instruction</lrmi:educationalUse>
+    
+    <dct:instructionalMethod>cooperativeLearning</dct:instructionalMethod>
+    <edu:tailoredLevel>enrichment</edu:tailoredLevel>
+    <lrmi:typicalAgeRange>15-17</lrmi:typicalAgeRange>
+    <lrmi:interactivityType>active</lrmi:interactivityType>
+    <lrmi:timeRequired>PT50M</lrmi:timeRequired>
+    
+    <lrmi:alignmentObject>
+        <lrmi:alignmentType>teaches</lrmi:alignmentType>
+        <lrmi:targetName>[10체02-02] 체조 자산의 가치를 이해하고, 체조 경기 분석을 통해 개인의 신체적 수월성을 추구한다.</lrmi:targetName>
+    </lrmi:alignmentObject>
+    
+    <kem:classification>2022-고등-체육-도전과경쟁-체조-뜀틀운동</kem:classification>
+    <cc:license>https://creativecommons.org/licenses/by-nc/4.0/</cc:license>
+    <cc:attributionName>선유고등학교 체육 교사 공동체</cc:attributionName>
+    
+    <edu:difficulty>Level 4 (고급 신체 협응 요구)</edu:difficulty>
+    <edu:safetyCaution>뜀틀 도약 시 구름판 정중앙을 밟지 않으면 발목 손상 위험이 있음. 반드시 손짚기 위치(뜀틀의 앞쪽 3분의 2 지점)를 준수하고, 착지 시 무릎을 굽혀 충격을 완화하도록 보조 요원(매트 매니저)을 2인 1조로 배치할 것.</edu:safetyCaution>
+    <edu:lessonSequence>2/4 차시 (동작 메커니즘 분석 및 실습)</edu:lessonSequence>
+    
+</LearningResource>

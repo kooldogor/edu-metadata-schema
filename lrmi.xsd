@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://purl.org/dcx/lrmi-terms/"
+           elementFormDefault="qualified">
+    
+    <xs:element name="learningResourceType">
+        <xs:annotation><xs:documentation>자원의 지배적인 교육적 형태나 역할 중심 분류</xs:documentation></xs:annotation>
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="lessonPlan"/><xs:enumeration value="presentation"/><xs:enumeration value="worksheet"/>
+                <xs:enumeration value="video"/><xs:enumeration value="assessment"/><xs:enumeration value="rubric"/>
+                <xs:enumeration value="aiPrompt"/><xs:enumeration value="manual"/><xs:enumeration value="background"/>
+                <xs:enumeration value="curriculumMap"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    
+    <xs:element name="educationalUse">
+        <xs:annotation><xs:documentation>자원이 교수 학습 과정의 어떤 단계나 목적(보충, 심화 등)에서 사용되는지 규정</xs:documentation></xs:annotation>
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="instruction"/><xs:enumeration value="assessment"/><xs:enumeration value="enrichment"/>
+                <xs:enumeration value="remediation"/><xs:enumeration value="professionalSupport"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    
+    <xs:element name="interactivityType">
+        <xs:annotation><xs:documentation>자원이 지원하는 학습 모드의 지배적 성격</xs:documentation></xs:annotation>
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="active"/><xs:enumeration value="expositive"/><xs:enumeration value="mixed"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    
+    <xs:element name="typicalAgeRange" type="xs:string">
+        <xs:annotation><xs:documentation>학습자의 전형적인 의도된 권장 연령 범위</xs:documentation></xs:annotation>
+    </xs:element>
+    
+    <xs:element name="timeRequired" type="xs:string">
+        <xs:annotation><xs:documentation>자원 완료 및 차시 계획 활동에 필요한 예상 표준 시간</xs:documentation></xs:annotation>
+    </xs:element>
+    
+    <xs:element name="alignmentObject">
+        <xs:annotation><xs:documentation>교육 프레임워크(국가 교육과정 성취기준 등)와 맺고 있는 연계 관계 기술</xs:documentation></xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="alignmentType" type="xs:string">
+                    <xs:annotation><xs:documentation>관계 유형 기입 (예: teaches, requires)</xs:documentation></xs:annotation>
+                </xs:element>
+                <xs:element name="targetName" type="xs:string">
+                    <xs:annotation><xs:documentation>연계할 국가 교육과정 성취기준 코드 및 매핑 내용</xs:documentation></xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+</xs:schema>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://purl.org/dc/terms/"
+           elementFormDefault="qualified">
+    
+    <xs:element name="instructionalMethod">
+        <xs:annotation><xs:documentation>학습 능력을 배양하기 위해 설계된 구체적인 수업 방식 및 교육적 프로세스</xs:documentation></xs:annotation>
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="flippedLearning">
+                    <xs:annotation><xs:documentation>교실 수업 전 사전 지식 습득을 유도하는 방식</xs:documentation></xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="inquiryBased">
+                    <xs:annotation><xs:documentation>탐구 질문을 던지고 가설을 검증하는 과학적 탐구 방식</xs:documentation></xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="collaborative">
+                    <xs:annotation><xs:documentation>학생 간의 상호작용과 협력을 강조하는 방식</xs:documentation></xs:annotation>
+                </xs:enumeration>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    
+</xs:schema>
