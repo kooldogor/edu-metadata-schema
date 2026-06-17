@@ -48,72 +48,55 @@ W3C XML Schema 설계 기법을 활용하여 오픈 데이터의 4대 핵심 가
 
 
 
-## 📊 4. Vocabulary Specification & Data Dictionary (데이터 사전)
+## 📊 4. 데이터 사전
 
-본 스키마를 구성하는 메타데이터 요소의 제약 조건, 필수성 및 의미 구조 정의 일람입니다.
-
-
-
+본 스키마를 구성하는 메타데이터 요소의 제약 조건 및 정의 일람입니다.
 
 ### 1) 메타데이터 요소 개요 표
 
+| 요소 이름 | 레이블 | 정의 및 목적 | 표준 소스 |
+| --- | --- | --- | --- |
+| dc title | 제목 | 자원의 명칭으로 검색의 일차적 기준 | Dublin Core |
+| dc identifier | 식별자 | 자원의 고유한 참조 URI | Dublin Core |
+| dc creator | 제작자 | 콘텐츠 생성에 책임이 있는 개인 또는 기관 | Dublin Core |
+| lrmi learningResourceType | 학습 자원 유형 | 자원의 지배적인 교육적 형태 분류 | LRMI Terms |
+| lrmi educationalUse | 교육적 용도 | 교수 학습 맥락에서의 주된 사용 목적 | LRMI Terms |
+| edu tailoredLevel | 개별화 수준 | 타겟팅하는 학습자의 성취 수준 | edu Local |
+| dct instructionalMethod | 교수 방법 | 설계된 교육적 프로세스 및 수업 방법 | Dublin Core Terms |
+| edu lessonSequence | 차시 순서 | 자원이 사용되는 특정 차시 및 순서 | edu Local |
+| lrmi interactivityType | 상호작용 유형 | 자원이 지원하는 학습 모드의 성격 | LRMI Terms |
+| lrmi typicalAgeRange | 대상 연령대 | 학습자의 전형적인 연령 범위 | LRMI Terms |
+| lrmi timeRequired | 소요 시간 | 자원 완료에 필요한 표준 시간 | LRMI Terms |
+| lrmi alignmentObject | 성취기준 연계 | 교육 프레임워크 성취기준 매핑 | LRMI Terms |
+| kem classification | 교육과정 분류 | 한국 국가 교육과정 체계 내 위치 정보 | KEM |
+| cc license | 라이선스 | 저작권 이용 허락 조건의 URL | Creative Commons |
+| cc attributionName | 출처 표기 | 저작권자의 성명 또는 기관명 | Creative Commons |
+| dc format | 기술적 포맷 | 물리적 또는 디지털 매체 형식 | Dublin Core |
+| edu difficulty | 학습 난이도 | 자원의 인지적 복잡성 | edu Local |
+| edu safetyCaution | 안전 주의사항 | 실험 및 활동 시의 안전 정보 | edu Local |
 
+### 2) 메타데이터 요소 상세 사전
 
-
-| 요소 이름 (Element Name) | 레이블 (Label) | 정의 및 목적 | 표준 소스 |
-| :--- | :---: | :--- | :---: |
-| `dc:title` | 제목 | 자원의 명칭으로 검색의 일차적 기준 | Dublin Core |
-| `dc:identifier` | 식별자 | 자원의 고유한 참조 문자열 또는 URI (System Primary Key) | Dublin Core |
-| `dc:creator` | 제작자 | 콘텐츠 생성에 책임이 있는 개인 또는 기관 | Dublin Core |
-| `lrmi:learningResourceType` | 학습 자원 유형 | 자원의 지배적인 교육적 형태 (역할 중심 분류) | LRMI Terms |
-| `lrmi:educationalUse` | 교육적 용도 | 교수 학습 맥락에서의 주된 사용 목적 및 단계 | LRMI Terms |
-| `edu:tailoredLevel` | 개별화 수준 | 성취기준 대비 해당 자료가 타겟팅하는 학습자의 성취 수준 (Custom) | `edu` Local |
-| `dct:instructionalMethod` | 교수 방법 | 학습 능력을 배양하기 위해 설계된 교육적 프로세스/방법 | Dublin Core Terms |
-| `edu:lessonSequence` | 차시 순서 | 전체 수업 내에서 해당 자료가 사용되는 특정 차시 및 순서 (Custom) | `edu` Local |
-| `lrmi:interactivityType` | 상호작용 유형 | 자원이 지원하는 학습 모드의 성격 | LRMI Terms |
-| `lrmi:typicalAgeRange` | 대상 연령대 | 학습자의 전형적인 연령 범위 | LRMI Terms |
-| `lrmi:timeRequired` | 소요 시간 | 자원 완료에 필요한 표준 시간 | LRMI Terms |
-| `lrmi:alignmentObject` | 성취기준 연계 | 교육 프레임워크와의 정합성 기술 (성취기준 매핑) | LRMI Terms |
-| `kem:classification` | 교육과정 분류 | 한국 국가 교육과정 체계 내의 위치 정보 | KEM (KERIS) |
-| `cc:license` | 라이선스 | 저작권 이용 허락 조건의 URL | Creative Commons |
-| `cc:attributionName` | 출처 표기 | 저작권자의 성명 또는 기관명 | Creative Commons |
-| `dc:format` | 기술적 포맷 | 물리적/디지털 매체 형식 | Dublin Core |
-| `edu:difficulty` | 학습 난이도 | 자원의 인지적 복잡성 (Custom) | `edu` Local |
-| `edu:safetyCaution` | 안전 주의사항 | 실험 시의 안전 정보 (Custom) | `edu` Local |
-
-
-
-
-### 2) 메타데이터 요소 상세 사전 (Detailed Metadata Dictionary)
-
-
-
-
-
-| 번호 | 요소명 (Property) | 기수 (필수성) | 데이터 값 (타입 / 통제 어휘집) | 정의 및 사용 목적 | 예시 |
-| :---: | :--- | :---: | :--- | :--- | :--- |
-| **1** | `dc:title` | 필수, 반복불가 | 문자열 (String) | 자원에 부여된 공식 명칭 (식별용 일차 정보) | "초등 4학년 분수 개념 이해 인터랙티브 게임판" |
-| **2** | `dc:identifier` | 필수, 반복불가 | 문자열 (URI) | 시스템 간 데이터 교환 시 자원을 특정하는 PK | `http://www.keris.or.kr/res/2024-MATH-E4-001` |
-| **3** | `dc:creator` | 필수, 반복가능 | 문자열 (String) | 자원 제작에 일차적 책임이 있는 개인 또는 기관 | "나현석 (선유고등학교)" |
-| **4** | `lrmi:learningResourceType` | 필수, 반복가능 | 문자열 (부록3 통제어휘) | 자원의 지배적인 교육적 형태나 역할 분류 | lesson plan, worksheet |
-| **5** | `lrmi:educationalUse` | 필수, 반복가능 | 문자열 (부록4 통제어휘) | 교수 학습 과정에서 수행하는 주된 목적 및 단계 | assessment, 동기유발자료 |
-| **6** | `lrmi:interactivityType` | 필수, 반복불가 | 문자열 (통제어휘) | 학습자에게 요구되는 지배적인 학습 모드 유형 | active |
-| **7** | `lrmi:typicalAgeRange` | 권장, 반복불가 | 문자열 (String) | 자원이 의도한 주 사용자의 연령 범위 | "10-12" |
-| **8** | `lrmi:timeRequired` | 권장, 반복불가 | ISO 8601 Duration | 활동을 완료하는 데 필요한 예상 시간 | PT40M (40분 소요) |
-| **9** | `lrmi:alignmentObject` | 필수, 반복가능 | 복합 데이터 구조 | 특정 교육 프레임워크(성취기준) 연계 관계 기술 | {alignmentType: "teaches", targetName: "MA12011"} |
-| **10** | `kem:classification` | 필수, 반복가능 | 계층적 코드 / 문자열 | 한국 국가 교육과정 내 자원의 위치 매핑 | "2022-고등-과학-4-1-열" |
-| **11** | `cc:license` | 필수, 반복불가 | URL (URI) | 자원에 적용된 CC 라이선스의 공식 URI 고유 주소 | `https://creativecommons.org/licenses/by-nc-sa/4.0/` |
-| **12** | `cc:attributionName` | 권장, 반복가능 | 문자열 (String) | 라이선스 조건에 따라 반드시 명시해야 하는 저작자명 | "서울선유등학교 나현석 교사" |
-| **13** | `dc:format` | 필수, 반복불가 | 문자열 (MIME 규격) | 자원의 물리적 혹은 디지털 매체 파일 형식 | application/pdf, file/docx |
-| **14** | `edu:difficulty` | 권장, 반복불가 | 통제어휘 (부록5 준수) | 자원이 요구하는 인지적 부하의 정도 | "Level 2 (보통)" |
-| **15** | `edu:safetyCaution` | 선택, 반복가능 | 문자열 (String) | 전기 교구나 실험 기구 사용 시 필수 안전 지침 | "전원 연결 시 젖은 손으로 만지지 마십시오." |
-| **16** | `edu:tailoredLevel` | 권장, 반복가능 | 문자열 (부록1 통제어휘) | 동일 성취기준 내 타겟 학습자 성취 수준 명시 | remediation (보충 자료) |
-| **17** | `dct:instructionalMethod` | 권장, 반복가능 | 문자열 (부록2 통제어휘) | 자원이 지원하도록 설계된 구체적 수업 방식 | flippedLearning, 실험수업 |
-| **18** | `edu:lessonSequence` | 권장, 반복불가 | 문자열 (String) | 전체 수업 내에서 해당 자료가 사용되는 특정 차시 | "3차시 (본시 활동)" |
-
-
-
-
+| 번호 | 요소명 | 기수 | 데이터 값 | 정의 및 사용 목적 | 예시 |
+| --- | --- | --- | --- | --- | --- |
+| 1 | dc title | 필수 반복불가 | 문자열 | 자원에 부여된 공식 명칭 | 초등 4학년 분수 게임판 |
+| 2 | dc identifier | 필수 반복불가 | URI | 시스템 간 데이터 교환을 위한 키 | http keris or kr res 001 |
+| 3 | dc creator | 필수 반복가능 | 문자열 | 자원 제작 책임 개인 또는 기관 | 나현석 선유고등학교 |
+| 4 | lrmi learningResourceType | 필수 반복가능 | 통제어휘 | 자원의 교육적 형태나 역할 분류 | lesson plan, worksheet |
+| 5 | lrmi educationalUse | 필수 반복가능 | 통제어휘 | 교수 학습 과정에서의 목적 및 단계 | assessment, 동기유발자료 |
+| 6 | lrmi interactivityType | 필수 반복불가 | 통제어휘 | 학습자에게 요구되는 학습 모드 | active |
+| 7 | lrmi typicalAgeRange | 권장 반복불가 | 문자열 | 자원이 의도한 주 사용자의 연령 | 10대 |
+| 8 | lrmi timeRequired | 권장 반복불가 | Duration | 활동 완료에 필요한 예상 시간 | PT40M 소요 |
+| 9 | lrmi alignmentObject | 필수 반복가능 | 복합구조 | 국가 교육과정 성취기준 연계 | 12물리0105 |
+| 10 | kem classification | 필수 반복가능 | 계층코드 | 한국 국가 교육과정 내 위치 매핑 | 2022 고등 과학 열 |
+| 11 | cc license | 필수 반복불가 | URI | 적용된 라이선스의 공식 주소 | https creativecommons org |
+| 12 | cc attributionName | 권장 반복가능 | 문자열 | 자원 재활용 시 명시할 저작자명 | 서울선유등학교 나현석 교사 |
+| 13 | dc format | 필수 반복불가 | MIME | 자원의 디지털 파일 형식 | application pdf |
+| 14 | edu difficulty | 권장 반복불가 | 통제어휘 | 자원이 요구하는 인지적 부하 정도 | 보통 |
+| 15 | edu safetyCaution | 선택 반복가능 | 문자열 | 실험 및 활동 시 필수 안전 지침 | 젖은 손으로 만지지 마십시오 |
+| 16 | edu tailoredLevel | 권장 반복가능 | 통제어휘 | 타겟 학습자 성취 수준 명시 | remediation 보충 자료 |
+| 17 | dct instructionalMethod | 권장 반복가능 | 통제어휘 | 자원이 지원하는 구체적 수업 방식 | flippedLearning, 실험수업 |
+| 18 | edu lessonSequence | 권장 반복불가 | 문자열 | 전체 수업 내 자원 사용 차시 | 3차시 본시 활동 |
 
 
 # 🗂️ 5. 데이터 값 통제 어휘집 (Controlled Vocabulary Appendix)
