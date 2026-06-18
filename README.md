@@ -18,16 +18,25 @@
 
 
 
-├── [README.md](README.md)                # 프로젝트 종합 안내서 및 가이드라인 웹 메인
-├── [learningresource.xsd](learningresource.xsd)     # [Main] 최상위 루트 컨테이너 구조 정의 스키마 파일 (FAIR 통합 레이어)
-├── [cc.xsd](cc.xsd)                 # Creative Commons 저작권 표준 모듈 스키마 파일 (Reusable 보장)
-├── [dc.xsd](dc.xsd)                 # Dublin Core Simple 서지 정보 표준 모듈 스키마 파일 (Findable 보장)
-├── [dct.xsd](dct.xsd)                # Dublin Core Terms 교수학습 방식 정의 모듈 스키마 파일 (Interoperable 보장)
-├── [kem.xsd](kem.xsd)                # KERIS 국가 교육과정 매핑 모듈 스키마 파일 (Interoperable 보장)
-├── [lrmi.xsd](lrmi.xsd)               # LRMI 교육 자원 교육 속성 정의 모듈 스키마 파일 (Reusable 보장)
-├── [lessonplan.xml](lessonplan.xml)       # [Sample 1] 물리학Ⅰ 정성적 탐구 수업 지도안 인스턴스 레코드
-├── [PE.xml](PE.xml)                 # [Sample 2] 체육과 뜀틀 단계별 두려움 극복 지도안 인스턴스 레코드
-└── [worksheet.xml](worksheet.xml)        # [Sample 3] 열에너지 보존 법칙 수준별 보충 활동지 인스턴스 레코드
+[README.md](README.md)                # 프로젝트 종합 안내서 및 가이드라인 웹 메인
+
+[learningresource.xsd](learningresource.xsd)     # [Main] 최상위 루트 컨테이너 구조 정의 스키마 파일 
+
+[cc.xsd](cc.xsd)                 # Creative Commons 
+
+[dc.xsd](dc.xsd)                 # Dublin Core Simple 
+
+[dct.xsd](dct.xsd)                # Dublin Core Terms 
+
+[kem.xsd](kem.xsd)                # KERIS 국가 교육과정 매핑 모듈 스키마 파일 
+
+[lrmi.xsd](lrmi.xsd)               # LRMI 교육 자원 교육 속성 정의 모듈 스키마 파일 
+
+[lessonplan.xml](lessonplan.xml)       # [Sample 1] 물리학Ⅰ 정성적 탐구 수업 지도안 인스턴스 레코드
+
+[PE.xml](PE.xml)                 # [Sample 2] 체육과 뜀틀 단계별 두려움 극복 지도안 인스턴스 레코드
+
+[worksheet.xml](worksheet.xml)        # [Sample 3] 열에너지 보존 법칙 수준별 보충 활동지 인스턴스 레코드
 
 
 
@@ -160,8 +169,8 @@ LRMI 및 CEDS 표준을 기반으로 한국 교육 현장에 맞게 재구성한
 
 ## 🛠️ 6. Technical Note: 외부 스키마 모듈화 통합 기법 (`xs:import`)
 
-설계 초기 단계에서 분산되어 배포된 여러 벤더의 표준 규격을 하나의 인스턴스로 바인딩할 때, 요소 선언의 파편화와 네임스페이스 충돌 오류가 빈번히 발생했습니다. 
+설계 초기 단계에서 분산되어 배포된 여러 벤더의 표준 규격을 하나의 인스턴스로 바인딩할 때 네임스페이스 충돌 오류가 빈번히 발생했습니다. 
 
-본 프로젝트는 이를 극복하기 위해 **독립형 분산 스키마 모듈화 아키텍처**를 수립했습니다. 최상위 컨테이너 레이어인 `learningresource.xsd`가 중심축이 되어 고유 타겟 네임스페이스(`http://metadata.edu/schema/`)를 유지한 상태에서, 로컬 경로에 분산된 개별 표준 모듈들(`dc.xsd`, `dct.xsd`, `lrmi.xsd`, `kem.xsd`, `cc.xsd`)을 기술적으로 임포트(`xs:import`)하여 유기적으로 확장 요소들과 격리 바인딩했습니다. 
+본 프로젝트는 이를 극복하기 위해 **독립형 분산 스키마 모듈화 아키텍처**를 수립했습니다. 최상위 컨테이너 레이어인 `learningresource.xsd`가 중심축이 되어 고유 타겟 네임스페이스(`http://metadata.edu/schema/`)를 유지한 상태에서, 로컬 경로에 분산된 개별 표준 모듈들(`dc.xsd`, `dct.xsd`, `lrmi.xsd`, `kem.xsd`, `cc.xsd`)을 기술적으로 임포트(`xs:import`)하여 유기적으로 확장 요소들과 분리했습니다.
 
-이러한 모듈 구조적 설계를 통해 인스턴스 XML 파일 내의 `xsi:schemaLocation` 경로가 본 공공 저장소(GitHub Pages) 실시간 웹 주소를 바라보아도 파서 상에서 에러 없이 **유효성 검증(Validation Success)**을 통과했습니다.
+이러한 모듈 구조적 설계를 통해 인스턴스 XML 파일 내의 `xsi:schemaLocation` 경로가 본 공공 저장소(GitHub Pages) 실시간 웹 주소를 사용하여도 에러 없이 **유효성 검증(Validation Success)**이 가능합니다.
