@@ -16,6 +16,8 @@
 각 파일명을 클릭하시면 **소스 코드를 즉시 확인하거나 다운로드**하실 수 있습니다.
 
 ```text
+
+
 ├── [README.md](README.md)                # 프로젝트 종합 안내서 및 가이드라인 웹 메인
 ├── [learningresource.xsd](learningresource.xsd)     # [Main] 최상위 루트 컨테이너 구조 정의 스키마 파일 (FAIR 통합 레이어)
 ├── [cc.xsd](cc.xsd)                 # Creative Commons 저작권 표준 모듈 스키마 파일 (Reusable 보장)
@@ -26,6 +28,7 @@
 ├── [lessonplan_2.xml](lessonplan_2.xml)       # [Sample 1] 물리학Ⅰ 정성적 탐구 수업 지도안 인스턴스 레코드
 ├── [PE.xml](PE.xml)                 # [Sample 2] 체육과 뜀틀 단계별 두려움 극복 지도안 인스턴스 레코드
 └── [worksheet_2.xml](worksheet_2.xml)        # [Sample 3] 열에너지 보존 법칙 수준별 보충 활동지 인스턴스 레코드
+
 
 
 ## 📝 2. Opening Narrative (개요 및 설계 배경)
