@@ -17,7 +17,7 @@
     <lrmi:learningResourceType>lessonPlan</lrmi:learningResourceType>
     <lrmi:educationalUse>instruction</lrmi:educationalUse>
     
-    <dct:instructionalMethod>cooperativeLearning</dct:instructionalMethod>
+    <dct:instructionalMethod>collaborative</dct:instructionalMethod>
     <edu:tailoredLevel>enrichment</edu:tailoredLevel>
     <lrmi:typicalAgeRange>15-17</lrmi:typicalAgeRange>
     <lrmi:interactivityType>active</lrmi:interactivityType>
